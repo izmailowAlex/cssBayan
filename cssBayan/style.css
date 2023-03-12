@@ -39,6 +39,10 @@ body {
   opacity: 0.5;
 }
 
+.bayan__item .item-wrapper:active .item__btn {
+  opacity: 0.5;
+}
+
 .item-header {
   font: 1.4em sans-serif;
   padding: 10px 20px;
@@ -56,7 +60,15 @@ body {
 }
 
 .item__btn {
+  width: 32px;
+  height: 32px;
+  background-image: url(./images/accordion.png);
+  transition: all 0.5s ease-in-out;
   display: none;
+}
+
+.item__btn img {
+  width: 20px;
 }
 
 .bayan:hover .item__btn {
@@ -64,7 +76,6 @@ body {
 }
 
 .bayan__item:hover .item__btn {
-  transition: all 0.2s ease-in-out;
   transform: rotate(45deg);
 }
 
