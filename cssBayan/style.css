@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+.bayan {
+  margin: 30px auto;
+  max-width: 700px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bayan__title {
+  padding: 0 20px;
+  font-size: 34px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.bayan__item {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.bayan__item .item-wrapper:active .item__title {
+  color: #0000ff;
+}
+
+.bayan__item .item-wrapper:active .bayan__image {
+  opacity: 0.5;
+}
+
+.bayan__item .item-wrapper:active .item__btn {
+  opacity: 0.5;
+}
+
+.item-header {
+  font: 1.4em sans-serif;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item__title {
+  line-height: 32px;
+  color: #0000ff;
+}
+
+.bayan:hover .item__title {
+  color: #000;
+}
+
+.item__btn {
+  width: 32px;
+  height: 32px;
+  background-image: url(./images/accordion.png);
+  transition: all 0.5s ease-in-out;
+  display: none;
+}
+
+.item__btn img {
+  width: 20px;
+}
+
+.bayan:hover .item__btn {
+  display: block;
+}
+
+.bayan__item:hover .item__btn {
+  transform: rotate(45deg);
+}
+
+.bayan-contain {
+  display: flex;
+  padding: 20px;
+}
+
+.bayan__image {
+  width: 0px;
+  margin: auto;
+  transition: all 0.5s ease;
+}
+
+.bayan__item:hover .bayan__image {
+  width: 300px;
+}
+
+.active .bayan__image {
+  width: 300px;
+}
+
+.active .item__btn {
+  transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+
+  .bayan {
+    margin: 20px auto;
+    max-width: 450px;
+    width: 280px;
+  }
+
+  .bayan__title {
+    padding: 0 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  .item-header {
+    padding: 0px 10px;
+    font: 0.9em sans-serif;
+  }
+
+  .bayan__item:hover .bayan__image {
+    width: 200px;
+  }
+
+  .bayan-contain {
+    padding: 10px;
+  }
+
+  .active .bayan__image {
+    width: 200px;
+  }
+}
