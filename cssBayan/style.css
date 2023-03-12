@@ -10,8 +10,8 @@ body {
 
 .bayan {
   margin: 5vh auto;
-  max-width: 70vw;
-  width: 70vw;
+  max-width: 65vw;
+  width: 65vw;
   display: flex;
   flex-direction: column;
 }
@@ -19,8 +19,7 @@ body {
 .bayan__title {
   padding: 0 3vw;
   font-size: 3rem;
-  margin-bottom: 5vh;
-  padding-bottom: 3vh;
+  margin-bottom: 2vh;
 }
 
 .bayan__item {
@@ -44,7 +43,7 @@ body {
 
 .item-header {
   font: 2em sans-serif;
-  padding: 2vh 3vw;
+  padding: 3vh 3vw 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,8 +59,8 @@ body {
 }
 
 .item__btn {
-  width: 3em;
-  height: 3em;
+  width: 1.5em;
+  height: 1.5em;
   background-image: url(./images/accordion.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -90,11 +89,11 @@ body {
 }
 
 .bayan__item:hover .bayan__image {
-  width: 30vw;
+  width: 20vw;
 }
 
 .active .bayan__image {
-  width: 30vw;
+  width: 20vw;
 }
 
 .active .item__btn {
@@ -105,6 +104,8 @@ body {
 
   .bayan {
     margin: 1.5vh auto;
+    max-width: 80vw;
+    width: 80vw;
   }
 
   .bayan__title {
@@ -114,16 +115,11 @@ body {
   }
 
   .item-header {
-    padding: 0px 2vw;
+    padding: 1vh 2vw 0;
     font: 0.9em sans-serif;
   }
 
   .item__title {
     line-height: 2rem;
-  }
-
-  .item__btn {
-    width: 2em;
-    height: 2em;
   }
 }
