@@ -6,6 +6,7 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
 }
 
 .bayan {
@@ -52,6 +53,7 @@ body {
 }
 
 .item__title {
+  line-height: 32px;
   color: #0000ff;
 }
 
@@ -98,6 +100,10 @@ body {
   width: 300px;
 }
 
+.active .item__btn {
+  transform: rotate(45deg);
+}
+
 @media (max-width: 768px) {
 
   .bayan {
@@ -115,7 +121,7 @@ body {
 
   .item-header {
     padding: 0px 10px;
-    font: 0.8em sans-serif;
+    font: 0.9em sans-serif;
   }
 
   .bayan__item:hover .bayan__image {
