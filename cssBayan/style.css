@@ -50,7 +50,9 @@ input[type=radio] {
 }
 
 input[type=radio]:checked ~ .bayan-contain {
-  display: block;
+  height: 100%;
+  visibility: visible;
+  opacity: 1;
 }
 
 input[type=radio]:checked ~ .item-header .item__btn {
@@ -78,13 +80,17 @@ input[type=radio]:checked ~ .item-header .item__btn {
   background-repeat: no-repeat;
   background-size: contain;
   transition: all 0.5s ease-in-out;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  animation: all 1s ease-in-out;
 }
 
 .bayan-contain {
-  display: none;
   padding: 3vh;
-  animation: showImage 0.5s ease-in-out;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .bayan__image {
@@ -94,15 +100,6 @@ input[type=radio]:checked ~ .item-header .item__btn {
   transition: all 0.5s ease;
 }
 
-@keyframes showImage {
-  0% {
-      transform: scaleY(0)
-  }
-  100% {
-      transform: scaleY(1)
-  }
-}
-
 @media (hover: hover) {
 
   .bayan:hover .item__title {
@@ -110,7 +107,8 @@ input[type=radio]:checked ~ .item-header .item__btn {
   }
 
   .bayan:hover .item__btn {
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
   
   .bayan__item:hover .item__btn {
@@ -118,7 +116,10 @@ input[type=radio]:checked ~ .item-header .item__btn {
   }
 
   .bayan__item:hover .bayan-contain {
-    display: block;
+    height: 100%;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s linear;
   }
 
 }
