@@ -45,15 +45,15 @@ body {
   opacity: 0.5;
 }
 
-.item__input {
+input[type=radio] {
   display: none;
 }
 
-.item__input:checked ~ .bayan-contain {
+input[type=radio]:checked ~ .bayan-contain {
   display: block;
 }
 
-.item__input:checked ~ .item-header .item__btn {
+input[type=radio]:checked ~ .item-header .item__btn {
   transform: rotate(45deg);
 }
 
