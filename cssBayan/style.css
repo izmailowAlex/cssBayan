@@ -70,10 +70,6 @@ input[type=radio]:checked ~ .item-header .item__btn {
   color: #0000ff;
 }
 
-.bayan:hover .item__title {
-  color: #000;
-}
-
 .item__btn {
   width: 1.5em;
   height: 1.5em;
@@ -83,14 +79,6 @@ input[type=radio]:checked ~ .item-header .item__btn {
   background-size: contain;
   transition: all 0.5s ease-in-out;
   display: none;
-}
-
-.bayan:hover .item__btn {
-  display: block;
-}
-
-.bayan__item:hover .item__btn {
-  transform: rotate(45deg);
 }
 
 .bayan-contain {
@@ -106,10 +94,6 @@ input[type=radio]:checked ~ .item-header .item__btn {
   transition: all 0.5s ease;
 }
 
-.bayan__item:hover .bayan-contain {
-  display: block;
-}
-
 @keyframes showImage {
   0% {
       transform: scaleY(0)
@@ -117,6 +101,26 @@ input[type=radio]:checked ~ .item-header .item__btn {
   100% {
       transform: scaleY(1)
   }
+}
+
+@media (hover: hover) {
+
+  .bayan:hover .item__title {
+    color: #000;
+  }
+
+  .bayan:hover .item__btn {
+    display: block;
+  }
+  
+  .bayan__item:hover .item__btn {
+    transform: rotate(45deg);
+  }
+
+  .bayan__item:hover .bayan-contain {
+    display: block;
+  }
+
 }
 
 @media (min-width: 1920px) {
